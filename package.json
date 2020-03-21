@@ -1,0 +1,24 @@
+{
+  "name": "vue-cli-plugin-vuefire",
+  "version": "1.0.0",
+  "description": "vue-cli plugin to add vue fire and firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominusKelvin/vue-cli-plugin-vuefire.git"
+  },
+  "bugs": "https://github.com/DominusKelvin/vue-cli-plugin-vuefire/issues",
+  "homepage": "https://github.com/DominusKelvin/vue-cli-plugin-vuefire#readme",
+  "author": "Kelvin Omereshone <kelvinomereshone@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "cli",
+    "plugin",
+    "firebase",
+    "vuefire"
+  ]
+}
