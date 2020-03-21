@@ -1,4 +1,4 @@
-module.exports = api => {
+module.exports = (api, options) => {
 
     api.extendPackage({
         dependencies: {
@@ -11,9 +11,8 @@ module.exports = api => {
         api.entryFile,
         `import { firestorePlugin } from 'vuefire'`
     );
-
     api.onCreateComplete(() => {
-        let vueUseLine = `\nVue.use(firestorePlugin)`
+        let vueUseLine = `\n\nVue.use(firestorePlugin)`
 
         const fs = require('fs')
 
@@ -31,10 +30,12 @@ module.exports = api => {
         fs.writeFileSync(api.entryFile, contentMain, { encoding: 'utf-8' });
     })
 
-    api.render('./template')
+    api.render('./template', {
+        firebaseProjectID: options.firebaseProjectID,
+        databaseType: options.databaseType
+    })
 
     api.exitLog('Vuefire 🔥 and firebase added to your project successfully')
-    api.exitLog("Don't forget to touch src/db.js to provide your firebase project id")
     api.exitLog('Check out https://vuefire.vuejs.org/vuefire/binding-subscriptions.html#declarative-binding for usage')
 
 };
