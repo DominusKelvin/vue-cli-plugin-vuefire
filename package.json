@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuefire",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue-cli plugin to add vue fire and firebase",
   "main": "index.js",
   "scripts": {
